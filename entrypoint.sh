@@ -33,8 +33,8 @@ if [ ! -e /var/www/html/magento2.4.5-p1 ] ; then
        --admin-firstname=Pedro \
        --admin-lastname=Mariano \
        --admin-email=plsmo@iscte-iul.pt \
-       --admin-user=plsm \
-       --admin-password="ai4paja/zz" \
+       --admin-user=userAdmin \
+       --admin-password="senhaAdmin" \
        --base-url="http://localhost" \
        --db-host=localhost \
        --db-name=magento_db \
