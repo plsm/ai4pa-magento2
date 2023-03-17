@@ -81,6 +81,22 @@ O script `mais-uma-volta.sh` apaga todos os _containers_ e apaga os volumes cria
 
 Em alternativa, executar `docker-compose up`.
 
+O script executado no arranque do _container_ invoca o programa `/var/www/html/magento2.4.5-p1/bin/magento` para instalar o magento.  Duas das opções são o nome de utilizador com poderes de administração e a sua senha.  Após a instalação, o programa imprime a URI de acesso à página de administração.
+
+	bin/magento setup:install \
+	       --admin-firstname=Pedro \
+	       --admin-lastname=Mariano \
+	       --admin-email=plsmo@iscte-iul.pt \
+	       --admin-user=userAdmin \
+	       --admin-password="senhaAdmin" \
+	       --base-url="http://localhost" \
+	       --db-host=localhost \
+	       --db-name=magento_db \
+	       --db-user=magento_user \
+	       --db-password=Password
+
+Neste comando também é especificado a localização do servidor mysql, a base de dados a usar pelo magento, e as credenciais do utilizador mysql com acesso à base de dados.
+
 
 ## Site Magento
 
